@@ -1,16 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const SecondPage = () => (
-  <Layout>
+  <div>
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+    <AniLink to="/" paintDrip duration={1} color="rebeccapurple" >
+      Go to Home Page using paintdrip transition
+    </AniLink>
+  </div>
 )
 
 export default SecondPage

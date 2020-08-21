@@ -1,22 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+    <h1>Gatsby transition link starter</h1>
+    <AniLink swipe direction="up" to="page2">
+      Go to Page 2 using swipe transition
+    </AniLink><br />
+    <AniLink swipe top="exit" direction="left" to="page3">
+      Go to Page 3 using swipe transition
+    </AniLink><br />
+    <AniLink swipe top="entry" direction="right" to="page4">
+      Go to Page 4 using swipe transition
+    </AniLink><br />
+    <AniLink fade to="page5">
+      Go to Page 5 using fade in transition
+    </AniLink>
+  </div>
 )
 
 export default IndexPage
